@@ -2,21 +2,16 @@
     <div class="col-lg-6 col-lg-offset-3">
         <h1 class="header">User Profile of <%= @user.name %></h1>
         <%= link_to 'Back', url_for(:back), class: "btn btn-default" %>
-        <% if can? :edit, @user %>
-            <%= link_to 'Edit', edit_user_path(@user), class: "btn btn-primary" %>
-        <% end %>
+        <%= link_to 'Edit', edit_user_path(@user), class: "btn btn-primary" %>
     </div>
 </div>
 <section class="row">
     <div class="col-lg-6 col-lg-offset-3">
         <div class="well">
-            <img src="<%= gravatar_for(@user) %>" class="img-circle center-block wh-150" alt="">
-            
+            <center><%= gravatar_for(@user) %></center>            
             <h1 class="text-center text-capitalize"><strong><%= @user.name %></strong></h1>
 
             <ul class="list-inline text-center">
-                <li><h4 class="text-muted"><span class="glyphicon glyphicon-phone"></span> <%= @user.phone %></h4></li>
-                <li><h4 class="text-muted"><span class="glyphicon glyphicon-user"></span> <%= @user.ic %></h4></li>
                 <li><a href="mailto:<%= @user.email %>"><h4 class="text-muted"><span class="glyphicon glyphicon-envelope"></span> <%= @user.email %></h4></a></li>
             </ul>
         </div>
