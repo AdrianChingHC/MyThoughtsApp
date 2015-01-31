@@ -1,7 +1,7 @@
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <div class="alert alert-danger"><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</div>
 
       <ul>
       <% @user.errors.full_messages.each do |message| %>
@@ -12,18 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field(:name, class:"form-control", autofocus: true, placeholder: "Full Name") %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.email_field(:email, class:"form-control", autofocus: true, placeholder: "Email") %>
   </div>
   <div class="field">
-    <%= f.label :password_digest %><br>
-    <%= f.text_field :password_digest %>
+    <%= f.password_field(:password, class:"form-control", autofocus: true, placeholder: "Password") %>
+  </div>
+  <div class="field">
+    <%= f.password_field(:password_confirmation, class:"form-control", autofocus: true, placeholder: "Confirm Your Password") %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <% if @user.new_record? %>
+      <%= f.submit 'Sign Up', class: "btn btn-block btn-primary" %>
+    <% else %> <!-- else show an update button -->
+      <%= f.submit 'Update', class: "btn btn-block btn-primary" %>
+    <% end %>
   </div>
 <% end %>

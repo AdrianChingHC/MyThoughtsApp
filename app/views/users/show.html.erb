@@ -1,19 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div class="header-container row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <h1 class="header">User Profile</h1>
+        <%= link_to 'Back', url_for(:back), class: "btn btn-default" %>
+        <%= link_to 'Edit', edit_user_path(@user), class: "btn btn-primary" %>
+    </div>
+</div>
+<section class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="well">
+            <%= gravatar_for(@user, 150) %>           
+            <h1 class="text-center text-capitalize"><strong><%= @user.name %></strong></h1>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<p>
-  <strong>Password digest:</strong>
-  <%= @user.password_digest %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+            <ul class="list-inline text-center">
+                <li><a href="mailto:<%= @user.email %>"><h4 class="text-muted"><span class="glyphicon glyphicon-envelope"></span> <%= @user.email %></h4></a></li>
+            </ul>
+        </div>
+    </div>
+</section>
