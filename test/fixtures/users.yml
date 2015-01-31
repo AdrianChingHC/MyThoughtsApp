@@ -3,4 +3,5 @@
 admin:
   name: Admin
   email: admin@mythoughtsapp.com
-  password_digest: password
+  password: password
+  password_confirmation: password
