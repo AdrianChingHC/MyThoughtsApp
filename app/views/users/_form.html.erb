@@ -13,17 +13,25 @@
 
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class="form-control", autofocus: true, placeholder: "Full Name" %>
   </div>
   <div class="field">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, class="form-control", autofocus: true, placeholder: "Email" %>
   </div>
   <div class="field">
-    <%= f.label :password_digest %><br>
-    <%= f.text_field :password_digest %>
+    <%= f.label :password %><br>
+    <%= f.text_field :password, class="form-control", autofocus: true, placeholder: "Password" %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation %><br>
+    <%= f.text_field :password_confirmation, class="form-control", autofocus: true, placeholder: "Confirm Your Password" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <% if @user.new_record? %>
+      <%= f.submit 'Sign Up', class: "btn btn-block btn-primary" %>
+    <% else %> <!-- else show an update button -->
+      <%= f.submit 'Update', class: "btn btn-block btn-primary" %>
+    <% end %>
   </div>
 <% end %>
