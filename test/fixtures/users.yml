@@ -3,5 +3,3 @@
 admin:
   name: Admin
   email: admin@mythoughtsapp.com
-  password: password
-  password_confirmation: password
