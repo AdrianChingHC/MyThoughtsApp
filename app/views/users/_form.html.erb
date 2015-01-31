@@ -13,19 +13,19 @@
 
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name, class="form-control", autofocus: true, placeholder: "Full Name" %>
+    <%= f.text_field(:name, class:"form-control", autofocus: true, placeholder: "Full Name") %>
   </div>
   <div class="field">
     <%= f.label :email %><br>
-    <%= f.text_field :email, class="form-control", autofocus: true, placeholder: "Email" %>
+    <%= f.text_field(:email, class:"form-control", autofocus: true, placeholder: "Email") %>
   </div>
   <div class="field">
     <%= f.label :password %><br>
-    <%= f.text_field :password, class="form-control", autofocus: true, placeholder: "Password" %>
+    <%= f.text_field(:password, class:"form-control", autofocus: true, placeholder: "Password") %>
   </div>
   <div class="field">
     <%= f.label :password_confirmation %><br>
-    <%= f.text_field :password_confirmation, class="form-control", autofocus: true, placeholder: "Confirm Your Password" %>
+    <%= f.text_field(:password_confirmation, class:"form-control", autofocus: true, placeholder: "Confirm Your Password") %>
   </div>
   <div class="actions">
     <% if @user.new_record? %>
