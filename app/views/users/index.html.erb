@@ -9,7 +9,9 @@
       <%= u.name %>
       <%= link_to 'Show', u, class: "btn btn-primary" %>
       <%= link_to 'Edit', edit_user_path(u) , class: "btn btn-primary" %>
+      <% if current_user.admin? && !current_user?(u) %>
       <%= link_to 'Destroy', u, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+      <%end%>
     </li>
   <% end %>
 </ul>
