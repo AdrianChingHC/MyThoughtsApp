@@ -8,7 +8,7 @@
 <section class="row">
     <div class="col-lg-6 col-lg-offset-3">
         <div class="well">
-            <img src="<%= gravatar_for(@user, 150) %>" class="img-circle center-block" alt="current_user.name">   
+            <img src="<%= gravatar_for(@user, 150) %>" class="img-circle center-block" alt="<%= @user.name %>">   
             <h1 class="text-center text-capitalize"><strong><%= @user.name %></strong></h1>
 
             <ul class="list-inline text-center">
