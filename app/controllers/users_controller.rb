@@ -38,7 +38,8 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1.json
   def update
       if @user.update(user_params)
-        fredirect_to @user, notice: 'User was successfully updated.'
+        redirect_to @user
+        flash[:success] = 'User was successfully updated.'
       else
         render :edit
       end
