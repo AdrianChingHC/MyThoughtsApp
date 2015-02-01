@@ -26,8 +26,12 @@
   <div class="actions">
     <% if @user.new_record? %>
       <%= f.submit 'Sign Up', class: "btn btn-block btn-primary" %>
-    <% else %> <!-- else show an update button -->
-      <%= f.submit 'Update', class: "btn btn-block btn-primary" %>
+    <% else %>
+    <div class="gravatar_edit">
+      <img src="<%= gravatar_for(@user, 80) %>" class="center-block" alt="<%= @user.name %>">
+      <%= link_to "Change", "http://gravatar.com/emails", class: "btn btn-primary", target: "_blank" %>
+    </div>
+      <%= f.submit 'Save Changes', class: "btn btn-block btn-primary" %>
     <% end %>
   </div>
 <% end %>
