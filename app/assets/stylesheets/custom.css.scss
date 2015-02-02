@@ -134,5 +134,10 @@ input {
   .timestamp {
     color: $gray-light;
     display: block;
+    float: left;
+    margin-right: 10px;
+  }
+  .glyphicon.glyphicon-pencil {
+  margin-right: 10px;
   }
 }
