@@ -13,7 +13,7 @@ class ThoughtsController < ApplicationController
       flash[:success] = "Thought successfully saved!"
       redirect_to thoughts_path
     else
-      render 'thoughts'
+    	render :index
     end
 	end
 
