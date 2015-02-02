@@ -1,7 +1,7 @@
 class ThoughtsController < ApplicationController
 	include SessionsHelper
-	before_action :logged_in_user, only: [:create, :destroy]
-	before_action :correct_user,   only: :destroy
+	before_action :logged_in_user, only: [:create, :destroy, :update]
+	before_action :correct_user,   only: [:destroy, :update]
 
 	def index
 		@thoughts = current_user.thoughts.paginate(page: params[:page], per_page: 10)
@@ -31,18 +31,17 @@ class ThoughtsController < ApplicationController
 	end
 
   def update
-  @thought = current_user.thoughts.find_by(id: params[:id])
-
-  respond_to do |format|
-    if @thought.update_attributes(params[:thought])
-      format.html { redirect_to @thought, notice: 'Thought was successfully updated.' }
-      format.json { head :no_content } # 204 No Content
+    if @thought.update(thought_params)
+      respond_to do |format|
+        format.html { redirect_to thoughts_path }
+        format.json { respond_with_bip(@thought) }
+      end
     else
-      format.html { render action: "edit" }
-      format.json { render json: @thought.errors, status: :unprocessable_entity }
+      format.html { render :action => "new" }
+      format.json { respond_with_bip(@thought) }
     end
   end
-end
+
 
 	def destroy
 		@thought.destroy

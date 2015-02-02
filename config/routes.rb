@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
   get 'thoughts' => 'thoughts#new'
-  resources :thoughts, only: [:create, :destroy]
+  resources :thoughts, only: [:create, :destroy, :update]
   get 'thoughts/feed' => 'thoughts#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

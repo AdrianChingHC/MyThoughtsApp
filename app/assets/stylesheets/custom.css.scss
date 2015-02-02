@@ -1,7 +1,6 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "bootstrap-editable";
 
 /* mixins, variables, etc. */
 
@@ -182,4 +181,15 @@ margin-top: -15px;
 .field {
 margin-top: 30px;
 margin-left: 15px;
+}
+
+.purr {
+  position: fixed;
+  top: 30px;
+  right: 100px;
+  width: 250px;
+  padding: 20px;
+  background-color: #FCC;
+  border: solid 2px #C66;
+  &:first-letter { text-transform: uppercase; }
 }
