@@ -1,10 +1,12 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
+  before_action :set_user, only: [:edit, :update, :show, :destroy]
+  before_action :require_admin, only: [:destroy, :index]
 
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.paginate(page: params[:page])
   end
 
   # GET /users/1
@@ -37,14 +39,11 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
-    respond_to do |format|
-      if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
-        format.json { render :show, status: :ok, location: @user }
-      else
-        format.html { render :edit }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+    if @user.update(user_params)
+      redirect_to @user
+      flash[:success] = 'User was successfully updated.'
+    else
+      render :edit
     end
   end
 
@@ -52,20 +51,27 @@ class UsersController < ApplicationController
   # DELETE /users/1.json
   def destroy
     @user.destroy
-    respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to users_url
+    flash[:success] = 'User was successfully destroyed.'
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
+      redirect_to(root_url) unless current_user?(@user) || is_admin?
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    end
+
+    def logged_in_user
+      unless logged_in?
+        store_location
+        flash[:danger] = "You must log in to access this page."
+        redirect_to login_url
+      end
     end
 end
