@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+first:
+ content: "This is my first thought!"
+ created_at: <%= 2.years.ago %>
+ user: admin
+
+second:
+ content: "Keep rocking life yo!"
+ created_at: <%= 1.years.ago %>
+ user: admin
+
+third:
+ content: "Check out my site at http://adrianching.com!"
+ created_at: <%= 3.hours.ago %>
+ user: admin
+
+recent:
+ content: "Writing web application"
+ created_at: <%= Time.zone.now %>
+ user: admin
+
+<% 30.times do |n| %>
+thought_<%= n %>:
+ content: <%= Faker::Lorem.sentence(5) %>
+ created_at: <%= 1.year.ago %>
+ user: admin
+<% end %>

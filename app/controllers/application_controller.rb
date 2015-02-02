@@ -12,4 +12,12 @@ class ApplicationController < ActionController::Base
           redirect_to root_path # halts request cycle
         end
   end
+
+  def logged_in_user
+      unless logged_in?
+        store_location
+        flash[:danger] = "You must log in to access this page."
+        redirect_to login_url
+      end
+    end
 end

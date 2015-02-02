@@ -56,4 +56,12 @@ class UserTest < ActiveSupport::TestCase
   	@user.password = @user.password_confirmation = "a" * 7
   	assert_not @user.valid?
   end
+
+  test "associated thoughts should be destroyed" do
+    @user.save
+    @user.thoughts.create!(content: "My Thoughts")
+    assert_difference 'Thought.count', -1 do
+      @user.destroy
+    end
+  end
 end
