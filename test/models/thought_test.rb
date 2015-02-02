@@ -17,4 +17,9 @@ class ThoughtTest < ActiveSupport::TestCase
     @thought.user_id = nil
     assert_not @thought.valid?
   end
+
+  test "content should be present " do
+    @thought.content = "   "
+    assert_not @thought.valid?
+  end
 end
