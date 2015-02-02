@@ -1,5 +1,6 @@
 class Thought < ActiveRecord::Base
 	include SimpleHashtag::Hashtaggable
+	hashtaggable_attribute :content
   belongs_to :user
   validates :user_id, presence: true
   validates :content, presence: true, length: { maximum: 250 }
