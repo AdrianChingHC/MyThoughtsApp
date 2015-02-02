@@ -22,4 +22,9 @@ class ThoughtTest < ActiveSupport::TestCase
     @thought.content = "   "
     assert_not @thought.valid?
   end
+  
+  test "content should not be longer than 250 characters" do
+  	@thought.content = "a" * 251
+  	assert_not @thought.valid?
+  end
 end
