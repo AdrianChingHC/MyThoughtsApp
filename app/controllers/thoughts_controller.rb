@@ -30,6 +30,20 @@ class ThoughtsController < ApplicationController
     end
 	end
 
+  def update
+  @thought = current_user.thoughts.find_by(id: params[:id])
+
+  respond_to do |format|
+    if @thought.update_attributes(params[:thought])
+      format.html { redirect_to @thought, notice: 'Thought was successfully updated.' }
+      format.json { head :no_content } # 204 No Content
+    else
+      format.html { render action: "edit" }
+      format.json { render json: @thought.errors, status: :unprocessable_entity }
+    end
+  end
+end
+
 	def destroy
 		@thought.destroy
     flash[:success] = "Thought successfully deleted"
