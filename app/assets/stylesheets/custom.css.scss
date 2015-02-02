@@ -146,3 +146,21 @@ input {
   margin-right: 10px;
   }
 }
+
+.field-button {
+width: 10%;
+float: left;
+}
+
+textarea#thought_content {
+width: 70%;
+float: left;
+margin-right: 10px;
+height: 35px;
+}
+
+.thought-page {
+  .pagination {
+  margin: 5px 0;
+  }
+}

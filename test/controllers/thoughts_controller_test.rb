@@ -10,7 +10,7 @@ class ThoughtsControllerTest < ActionController::TestCase
 
   test "should redirect create when not logged in" do
     assert_no_difference 'thoughts.count' do
-      post :create, thought: { content: "Lorem ipsum" }
+      post :create, thought: { content: "Another thought" }
     end
     assert_redirected_to login_url
   end
