@@ -29,6 +29,6 @@ class ThoughtTest < ActiveSupport::TestCase
   end
 
   test "order should be most recent first" do
-    assert_equal Thought.first, thoughts(:most_recent)
+    assert_equal Thought.first, thoughts(:recent)
   end
 end
