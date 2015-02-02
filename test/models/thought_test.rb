@@ -27,4 +27,8 @@ class ThoughtTest < ActiveSupport::TestCase
   	@thought.content = "a" * 251
   	assert_not @thought.valid?
   end
+
+  test "order should be most recent first" do
+    assert_equal Thought.first, thoughts(:most_recent)
+  end
 end
