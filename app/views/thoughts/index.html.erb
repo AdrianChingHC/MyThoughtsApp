@@ -1,0 +1,9 @@
+<div class="col-md-8">
+    <% if current_user.thoughts.any? %>
+      <h3> Your Thoughts (<%= current_user.thoughts.count %>)</h3>
+      <ol class="thoughts">
+        <%= render @thoughts %>
+      </ol>
+      <%= will_paginate @thoughts %>
+    <% end %>
+</div>
