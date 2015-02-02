@@ -1,0 +1,150 @@
+0000000000000000000000000000000000000000 134ed5770df217645de12eebe2804c9a834f084b AdrianChingHC <achc92@gmail.com> 1422660735 +0800	commit (initial): Initial commit
+134ed5770df217645de12eebe2804c9a834f084b 134ed5770df217645de12eebe2804c9a834f084b AdrianChingHC <achc92@gmail.com> 1422660735 +0800	checkout: moving from master to develop
+134ed5770df217645de12eebe2804c9a834f084b bac85dcebe8bf38a0dc87ad471fbc1cf5f9fd395 AdrianChingHC <achc92@gmail.com> 1422660997 +0800	commit: Initial Commit
+bac85dcebe8bf38a0dc87ad471fbc1cf5f9fd395 134ed5770df217645de12eebe2804c9a834f084b AdrianChingHC <achc92@gmail.com> 1422661021 +0800	checkout: moving from develop to master
+134ed5770df217645de12eebe2804c9a834f084b bac85dcebe8bf38a0dc87ad471fbc1cf5f9fd395 AdrianChingHC <achc92@gmail.com> 1422661031 +0800	checkout: moving from master to develop
+bac85dcebe8bf38a0dc87ad471fbc1cf5f9fd395 134ed5770df217645de12eebe2804c9a834f084b AdrianChingHC <achc92@gmail.com> 1422661104 +0800	checkout: moving from develop to master
+134ed5770df217645de12eebe2804c9a834f084b bac85dcebe8bf38a0dc87ad471fbc1cf5f9fd395 AdrianChingHC <achc92@gmail.com> 1422661121 +0800	checkout: moving from master to develop
+bac85dcebe8bf38a0dc87ad471fbc1cf5f9fd395 a5bdbd89a6654f2d780fc3e3b7078ebc5f7b7dd5 AdrianChingHC <achc92@gmail.com> 1422662019 +0800	commit: Update README
+a5bdbd89a6654f2d780fc3e3b7078ebc5f7b7dd5 04c4bd8a8b372aa4761a4770d2e09e1a3ca44395 AdrianChingHC <achc92@gmail.com> 1422662185 +0800	commit: Add README.md
+04c4bd8a8b372aa4761a4770d2e09e1a3ca44395 cb3543731ff77382c73aa29321c292c90320ee76 AdrianChingHC <achc92@gmail.com> 1422662231 +0800	commit: Update README
+cb3543731ff77382c73aa29321c292c90320ee76 13a149cc13128be8e7a9f786c7f1dc5f9fe0b2c7 AdrianChingHC <achc92@gmail.com> 1422662895 +0800	commit: Add Bootstrap Sass
+13a149cc13128be8e7a9f786c7f1dc5f9fe0b2c7 65ac51194f1263736d158d150a0f3357360d5ca4 AdrianChingHC <achc92@gmail.com> 1422663809 +0800	commit: Add gems necessary for development, production and test
+65ac51194f1263736d158d150a0f3357360d5ca4 1c76266d6d5791e1f8df4b9aa5ee370dc790bb12 AdrianChingHC <achc92@gmail.com> 1422664574 +0800	commit: Set up minitest and guard
+1c76266d6d5791e1f8df4b9aa5ee370dc790bb12 c07cc29fce0a500488b9f5157988043a6dc93a15 AdrianChingHC <achc92@gmail.com> 1422664872 +0800	commit: Add User scaffold
+c07cc29fce0a500488b9f5157988043a6dc93a15 c07cc29fce0a500488b9f5157988043a6dc93a15 AdrianChingHC <achc92@gmail.com> 1422664949 +0800	checkout: moving from develop to feature/user-account
+c07cc29fce0a500488b9f5157988043a6dc93a15 1200d6d8c8aa893b8914a93c27b39dc9dc6826b3 AdrianChingHC <achc92@gmail.com> 1422665728 +0800	commit: Migrate user table
+1200d6d8c8aa893b8914a93c27b39dc9dc6826b3 e3baf411db2be66e4f241afe435463cbf6c80171 AdrianChingHC <achc92@gmail.com> 1422668215 +0800	commit: Test for initially valid user
+e3baf411db2be66e4f241afe435463cbf6c80171 0ff9a28ebc5496a81f90c2c491dfd79addf32bad AdrianChingHC <achc92@gmail.com> 1422668348 +0800	commit: Test for user name presence
+0ff9a28ebc5496a81f90c2c491dfd79addf32bad a7256db06f1794a00d08eda3cd40adbfbd885ac6 AdrianChingHC <achc92@gmail.com> 1422668441 +0800	commit: Validate user name presence
+a7256db06f1794a00d08eda3cd40adbfbd885ac6 15e67a9dd5ca1ded8251052152c33632bf83e137 AdrianChingHC <achc92@gmail.com> 1422668512 +0800	commit: Test for user email presence
+15e67a9dd5ca1ded8251052152c33632bf83e137 ea8f4d96c004b1653b0f64fae3627aa33a6262d9 AdrianChingHC <achc92@gmail.com> 1422668536 +0800	commit: Validate user email presence
+ea8f4d96c004b1653b0f64fae3627aa33a6262d9 95abf17c8a4214dfc5fb90a8787fcff8334d0550 AdrianChingHC <achc92@gmail.com> 1422668661 +0800	commit: Test for user name length
+95abf17c8a4214dfc5fb90a8787fcff8334d0550 d3a2005874ba7949fab24eb74fa555f1ff1dc2fa AdrianChingHC <achc92@gmail.com> 1422668737 +0800	commit: Restrict user name length to 50 chars
+d3a2005874ba7949fab24eb74fa555f1ff1dc2fa e16267f8f7929fb4847779bfc343698b285608f6 AdrianChingHC <achc92@gmail.com> 1422668935 +0800	commit: Test for user email length
+e16267f8f7929fb4847779bfc343698b285608f6 7d26e0d7593aa65f82f6a4e60381c6f5265b6190 AdrianChingHC <achc92@gmail.com> 1422668963 +0800	commit: Restrict user email length to 255 chars
+7d26e0d7593aa65f82f6a4e60381c6f5265b6190 1536f249ab065d623cf7c23010a911fd5b0d9d89 AdrianChingHC <achc92@gmail.com> 1422669407 +0800	commit: Test for valid email addresses format
+1536f249ab065d623cf7c23010a911fd5b0d9d89 8b165904e38cc320e3e98fa493a57cbba7819d8d AdrianChingHC <achc92@gmail.com> 1422670064 +0800	commit: Test for invalid email addresses format
+8b165904e38cc320e3e98fa493a57cbba7819d8d 5dd9c5b7322d8022b1bbf0b431fc4e7161888b16 AdrianChingHC <achc92@gmail.com> 1422670340 +0800	commit: Add invalid email addresses to test
+5dd9c5b7322d8022b1bbf0b431fc4e7161888b16 738445cc378b27267816648838ab0d60499dfcb6 AdrianChingHC <achc92@gmail.com> 1422670441 +0800	commit: Validate email format with REGEX
+738445cc378b27267816648838ab0d60499dfcb6 a05f2352a837ae596b30ae35be61579c25bddbdb AdrianChingHC <achc92@gmail.com> 1422670525 +0800	commit: Test for email addresses uniqueness
+a05f2352a837ae596b30ae35be61579c25bddbdb 992bb87b61fab96913554168b9bfb4b00e4f77d6 AdrianChingHC <achc92@gmail.com> 1422670562 +0800	commit: Validate email addresses uniqueness
+992bb87b61fab96913554168b9bfb4b00e4f77d6 6d5330230754285bae7ff31badce30ef2d85d663 AdrianChingHC <achc92@gmail.com> 1422670667 +0800	commit: Test and validate case insensitive email
+6d5330230754285bae7ff31badce30ef2d85d663 a37e9b75d40202af95f191a2fc24c53bcc477772 AdrianChingHC <achc92@gmail.com> 1422671309 +0800	commit: Add index to user email for database level uniqueness
+a37e9b75d40202af95f191a2fc24c53bcc477772 20ae4109215f25e88669c88aaf6f9ba8ab12cb69 AdrianChingHC <achc92@gmail.com> 1422671469 +0800	commit: Implement email downcasing
+20ae4109215f25e88669c88aaf6f9ba8ab12cb69 f3dc4224c0d7328aa3f14f1993c1d8e1ed5b37ef AdrianChingHC <achc92@gmail.com> 1422671892 +0800	commit: Add password and password confirmation to user in test
+f3dc4224c0d7328aa3f14f1993c1d8e1ed5b37ef 720a345f5a09752e61238b60c0cbcb52f80bf5ec AdrianChingHC <achc92@gmail.com> 1422671955 +0800	commit: Implement has secure password
+720a345f5a09752e61238b60c0cbcb52f80bf5ec 1a30c5bd8eafdb0d4a0a1ec83405865ca4dd4db1 AdrianChingHC <achc92@gmail.com> 1422672071 +0800	commit: Test for password length
+1a30c5bd8eafdb0d4a0a1ec83405865ca4dd4db1 d3cd16837a8aa3d005635ad242ff0396dd3cdce6 AdrianChingHC <achc92@gmail.com> 1422672125 +0800	commit: Implement password length of at least 8 chars
+d3cd16837a8aa3d005635ad242ff0396dd3cdce6 0bba088850a82efefb40058bef5b11e6b0c53959 AdrianChingHC <achc92@gmail.com> 1422689857 +0800	commit: Add debug info to footer if dev env
+0bba088850a82efefb40058bef5b11e6b0c53959 f753cb89241795166d0f2fe75918e74a9fe488c1 AdrianChingHC <achc92@gmail.com> 1422690170 +0800	commit: Add styling to debug info box
+f753cb89241795166d0f2fe75918e74a9fe488c1 bdd9be4181dce73d20c23af3c95172150d6e2429 AdrianChingHC <achc92@gmail.com> 1422691048 +0800	commit: Test for invalid signup
+bdd9be4181dce73d20c23af3c95172150d6e2429 91cd8ebabf67e08124ffcf78a32778317b06aeb4 AdrianChingHC <achc92@gmail.com> 1422692637 +0800	commit: Define gravatar_for method in user helper
+91cd8ebabf67e08124ffcf78a32778317b06aeb4 b0be9651dc9fb41b7d3cdeb6a9ee7d2ff811c71b AdrianChingHC <achc92@gmail.com> 1422693691 +0800	commit: Modify user profile page
+b0be9651dc9fb41b7d3cdeb6a9ee7d2ff811c71b bbf24655393de7230ed5d97d5b3662a7c1d98d05 AdrianChingHC <achc92@gmail.com> 1422694294 +0800	commit: Update User Sign Up Form
+bbf24655393de7230ed5d97d5b3662a7c1d98d05 422a65f51be6142f10700419cc668b283ebbc794 AdrianChingHC <achc92@gmail.com> 1422694439 +0800	commit: Fix signup form syntax error
+422a65f51be6142f10700419cc668b283ebbc794 808d8064615e283d3d8494ea69feb235f5868f07 AdrianChingHC <achc92@gmail.com> 1422695471 +0800	commit: Update user profile page
+808d8064615e283d3d8494ea69feb235f5868f07 ee4b8aaa862014422f64d82d16ef95960ed00282 AdrianChingHC <achc92@gmail.com> 1422705790 +0800	commit: Modify gravatar method in helper
+ee4b8aaa862014422f64d82d16ef95960ed00282 1d14a8907772c479033a0410679816c5a867c568 AdrianChingHC <achc92@gmail.com> 1422706126 +0800	commit: Fix gravatar image
+1d14a8907772c479033a0410679816c5a867c568 4ce45ca8fb8a6a8c31c8644f33346a169336c1a6 AdrianChingHC <achc92@gmail.com> 1422708239 +0800	commit: Add alert-danger to error message
+4ce45ca8fb8a6a8c31c8644f33346a169336c1a6 839a9550bcb76ee1c012afb5ebc74f21e526d16a AdrianChingHC <achc92@gmail.com> 1422709026 +0800	commit: Fix css for form error message
+839a9550bcb76ee1c012afb5ebc74f21e526d16a 80e4889359782e0f90fbe9988ac401c5f074addc AdrianChingHC <achc92@gmail.com> 1422709054 +0800	commit: Fix application.css file type
+80e4889359782e0f90fbe9988ac401c5f074addc 8790b986654b10a4b541a907e7a20399f2b376df AdrianChingHC <achc92@gmail.com> 1422709176 +0800	commit: Add flash message to appication
+8790b986654b10a4b541a907e7a20399f2b376df 97204bb7634943bf4d4b3c05aa5d9f15eb3f0b45 AdrianChingHC <achc92@gmail.com> 1422709746 +0800	commit: Clean up create method in user controller
+97204bb7634943bf4d4b3c05aa5d9f15eb3f0b45 9a09f5bc1d23aff8c7f6d606d752288b95a1b0de AdrianChingHC <achc92@gmail.com> 1422709972 +0800	commit: Integration test for valid signup
+9a09f5bc1d23aff8c7f6d606d752288b95a1b0de b72906f172fa5f7cb2d94c1b9c7a7e1efa979712 AdrianChingHC <achc92@gmail.com> 1422710191 +0800	commit: Add test for error message after invalid signup
+b72906f172fa5f7cb2d94c1b9c7a7e1efa979712 4de9c891baa435e6a469e8049e861f09861929de AdrianChingHC <achc92@gmail.com> 1422710239 +0800	commit: Add test for flash message after valid signup
+4de9c891baa435e6a469e8049e861f09861929de dd878d5bb8b94addcde636bd7d037d2a3569a0d4 AdrianChingHC <achc92@gmail.com> 1422710306 +0800	commit: Use content tag for flash message
+dd878d5bb8b94addcde636bd7d037d2a3569a0d4 c07cc29fce0a500488b9f5157988043a6dc93a15 AdrianChingHC <achc92@gmail.com> 1422710827 +0800	checkout: moving from feature/user-account to develop
+c07cc29fce0a500488b9f5157988043a6dc93a15 009c2afbffcbf918a7fa98ff41d29d8c05e8b8c2 AdrianChingHC <achc92@gmail.com> 1422710827 +0800	merge feature/user-account: Merge made by the 'recursive' strategy.
+009c2afbffcbf918a7fa98ff41d29d8c05e8b8c2 009c2afbffcbf918a7fa98ff41d29d8c05e8b8c2 AdrianChingHC <achc92@gmail.com> 1422710956 +0800	checkout: moving from develop to feature/enable-ssl
+009c2afbffcbf918a7fa98ff41d29d8c05e8b8c2 c3bc472cedd6d022b811a0ba49aeb476dca3ac03 AdrianChingHC <achc92@gmail.com> 1422711002 +0800	commit: Force SSl in production
+c3bc472cedd6d022b811a0ba49aeb476dca3ac03 f312b4c0ea0095bd79eaf3435154b425a6fa2dfc AdrianChingHC <achc92@gmail.com> 1422711089 +0800	commit: Add unicorn gem for production
+f312b4c0ea0095bd79eaf3435154b425a6fa2dfc 3a7c82246efd198916dcd847af0a592fb4453916 AdrianChingHC <achc92@gmail.com> 1422711144 +0800	commit: Add unicorn.rb
+3a7c82246efd198916dcd847af0a592fb4453916 07fa17a48c1d9a8c147497fa72dc246684c0aa06 AdrianChingHC <achc92@gmail.com> 1422711189 +0800	commit: Add Procfile
+07fa17a48c1d9a8c147497fa72dc246684c0aa06 009c2afbffcbf918a7fa98ff41d29d8c05e8b8c2 AdrianChingHC <achc92@gmail.com> 1422711239 +0800	checkout: moving from feature/enable-ssl to develop
+009c2afbffcbf918a7fa98ff41d29d8c05e8b8c2 ea693b6ac8e931a14187824601af7fb5d55cf57a AdrianChingHC <achc92@gmail.com> 1422711239 +0800	merge feature/enable-ssl: Merge made by the 'recursive' strategy.
+ea693b6ac8e931a14187824601af7fb5d55cf57a ea693b6ac8e931a14187824601af7fb5d55cf57a AdrianChingHC <achc92@gmail.com> 1422712297 +0800	checkout: moving from develop to feature/user-log-in-log-out
+ea693b6ac8e931a14187824601af7fb5d55cf57a cde2cb5000f60cbcd02de50e98d4f4079090adfa AdrianChingHC <achc92@gmail.com> 1422713299 +0800	commit: Generate sessions controller
+cde2cb5000f60cbcd02de50e98d4f4079090adfa 1d99a2512b4fb43d5120f52d5635de3466f84e22 AdrianChingHC <achc92@gmail.com> 1422713390 +0800	commit: Add routes for login and logout
+1d99a2512b4fb43d5120f52d5635de3466f84e22 0d81894b163d3f67b236e8ce00b41a9388cc087b AdrianChingHC <achc92@gmail.com> 1422714183 +0800	commit: Modify Signup page, Create login page
+0d81894b163d3f67b236e8ce00b41a9388cc087b 096001b4099e39c2c41c944cb0b7fd982f8093f9 AdrianChingHC <achc92@gmail.com> 1422716177 +0800	commit: Add flash message for invalid login
+096001b4099e39c2c41c944cb0b7fd982f8093f9 b29c67972a7beb4dd964448e738fcea84c79cbe7 AdrianChingHC <achc92@gmail.com> 1422717728 +0800	commit: Test for unwanted flash persistence
+b29c67972a7beb4dd964448e738fcea84c79cbe7 620aedf02a92e256615149fb5b4644fa9fa7ba26 AdrianChingHC <achc92@gmail.com> 1422717850 +0800	commit: Add root path
+620aedf02a92e256615149fb5b4644fa9fa7ba26 00852e5072c2c382c6c516bceada89cd2736bfcc AdrianChingHC <achc92@gmail.com> 1422718141 +0800	commit: Change flash to flash.now
+00852e5072c2c382c6c516bceada89cd2736bfcc afa72d13ba6cf50251a372b3431ea970fa661a1f AdrianChingHC <achc92@gmail.com> 1422718394 +0800	commit: Define log in helper, Log user in and redirect to user profile page
+afa72d13ba6cf50251a372b3431ea970fa661a1f b663515662cadc1af7910d64a37c1cb9195d25f2 AdrianChingHC <achc92@gmail.com> 1422718459 +0800	commit: Fix log in helper
+b663515662cadc1af7910d64a37c1cb9195d25f2 6a83cbec684cdb37ecb98dc1911b85b55b9a6df1 AdrianChingHC <achc92@gmail.com> 1422720784 +0800	commit: Define current_user method in sessions helper
+6a83cbec684cdb37ecb98dc1911b85b55b9a6df1 12093e0109ae71121ccdf63ed35906d28ccc74ca AdrianChingHC <achc92@gmail.com> 1422721412 +0800	commit: Add header for app
+12093e0109ae71121ccdf63ed35906d28ccc74ca b0d2c2d741f36aac202c9c7d3a00c40c81dfbf65 AdrianChingHC <achc92@gmail.com> 1422721446 +0800	commit: Define logged_in? helper
+b0d2c2d741f36aac202c9c7d3a00c40c81dfbf65 948344a4ccc983d6e94add0fb3b9c8f261349ee5 AdrianChingHC <achc92@gmail.com> 1422722649 +0800	commit: Add gravatar image to header
+948344a4ccc983d6e94add0fb3b9c8f261349ee5 a87a9df880df45eb3b326052a91e933b11bdba2e AdrianChingHC <achc92@gmail.com> 1422722752 +0800	commit: Require bootstrap in application.js
+a87a9df880df45eb3b326052a91e933b11bdba2e edfd76b8ec10da191cd41323f52c918ae52514cf AdrianChingHC <achc92@gmail.com> 1422723029 +0800	commit: Require bootstrap in application.js
+edfd76b8ec10da191cd41323f52c918ae52514cf 50fc0e76cbec39ebd87dc206ce3f2b35aed7033f AdrianChingHC <achc92@gmail.com> 1422723161 +0800	commit: Define method for returing password has digest
+50fc0e76cbec39ebd87dc206ce3f2b35aed7033f 8259989665ae97a930776181e1887415976ac7f0 AdrianChingHC <achc92@gmail.com> 1422724637 +0800	commit: Add password digest to fixture
+8259989665ae97a930776181e1887415976ac7f0 ba2a6029c13177a43cd59bb4f91497df39c5e793 AdrianChingHC <achc92@gmail.com> 1422724997 +0800	commit: Log in user after sign up
+ba2a6029c13177a43cd59bb4f91497df39c5e793 3f85939a4e6d89940623839c0e72b2581b967911 AdrianChingHC <achc92@gmail.com> 1422725174 +0800	commit: Test login then logout
+3f85939a4e6d89940623839c0e72b2581b967911 ea693b6ac8e931a14187824601af7fb5d55cf57a AdrianChingHC <achc92@gmail.com> 1422749407 +0800	checkout: moving from feature/user-log-in-log-out to develop
+ea693b6ac8e931a14187824601af7fb5d55cf57a cf86e424aecc43062f3fadc256f19920850ca469 AdrianChingHC <achc92@gmail.com> 1422749407 +0800	merge feature/user-log-in-log-out: Merge made by the 'recursive' strategy.
+cf86e424aecc43062f3fadc256f19920850ca469 cf86e424aecc43062f3fadc256f19920850ca469 AdrianChingHC <achc92@gmail.com> 1422749770 +0800	checkout: moving from develop to feature/user-crud
+cf86e424aecc43062f3fadc256f19920850ca469 413aa121c9d5fe60fbd76a0244c41d1b9260e5ac AdrianChingHC <achc92@gmail.com> 1422752817 +0800	commit: Add option to edit gravatar image
+413aa121c9d5fe60fbd76a0244c41d1b9260e5ac 0cf9dfdca148a216994a18e196fba74e77be026c AdrianChingHC <achc92@gmail.com> 1422752874 +0800	commit: Clean up update method in users controller
+0cf9dfdca148a216994a18e196fba74e77be026c 0860c7311affd5ff995a0f5836ee02c8576111c4 AdrianChingHC <achc92@gmail.com> 1422752911 +0800	commit: Clean up update method in users controller
+0860c7311affd5ff995a0f5836ee02c8576111c4 c86ddf3348d1cf6d3ece47c426ec490fd3849e46 AdrianChingHC <achc92@gmail.com> 1422753174 +0800	commit: Allow updating user without password changes
+c86ddf3348d1cf6d3ece47c426ec490fd3849e46 34be36bd4c484f736042b1ee4fe30b69a638c510 AdrianChingHC <achc92@gmail.com> 1422763283 +0800	commit: Restore password needed for update
+34be36bd4c484f736042b1ee4fe30b69a638c510 281719d2cb17b2db83d9d2e216230f42df0fadb3 AdrianChingHC <achc92@gmail.com> 1422766261 +0800	commit: Test for unsuccessful user edits
+281719d2cb17b2db83d9d2e216230f42df0fadb3 73c856a0ff172362de3cc4784176b7fb3bb96603 AdrianChingHC <achc92@gmail.com> 1422766399 +0800	commit: Test for successful user edits
+73c856a0ff172362de3cc4784176b7fb3bb96603 7e0472f848e2c4630b9ccc3c78ff6ac474022a5a AdrianChingHC <achc92@gmail.com> 1422766470 +0800	commit: Allow password to be blank for update user without password changes
+7e0472f848e2c4630b9ccc3c78ff6ac474022a5a 7e71dd1152af64d0bdffa667cb1fa3554999d71f AdrianChingHC <achc92@gmail.com> 1422779576 +0800	commit: Test for authorization of update user action
+7e71dd1152af64d0bdffa667cb1fa3554999d71f ddb8a53ea4db1142ac2b4eb4eb7b0da159df5a04 AdrianChingHC <achc92@gmail.com> 1422780692 +0800	commit: Implement authorization for user update action
+ddb8a53ea4db1142ac2b4eb4eb7b0da159df5a04 4332ccb71be004aa591a1f065e1a910427c2bbf1 AdrianChingHC <achc92@gmail.com> 1422780834 +0800	commit: Add another user to fixture for testing
+4332ccb71be004aa591a1f065e1a910427c2bbf1 d059da87f6b63f329bdd23bdac3d555575621b48 AdrianChingHC <achc92@gmail.com> 1422781013 +0800	commit: Test for authorization between users
+d059da87f6b63f329bdd23bdac3d555575621b48 59c3f8f8b93e953b256a3c6d39ee70213a8a43d8 AdrianChingHC <achc92@gmail.com> 1422781546 +0800	commit: Implement authorization between users
+59c3f8f8b93e953b256a3c6d39ee70213a8a43d8 9eab6fbb2ecc3983efc4a4e194fda3b53d0d7b09 AdrianChingHC <achc92@gmail.com> 1422781667 +0800	commit: Define current_user? helper in sessions
+9eab6fbb2ecc3983efc4a4e194fda3b53d0d7b09 0d8dc34194bb0afe2427d0a16e2a2f3401e2ba17 AdrianChingHC <achc92@gmail.com> 1422795307 +0800	commit: Test for friendly forwarding
+0d8dc34194bb0afe2427d0a16e2a2f3401e2ba17 43766093d4ec84e195cc7ad8cceb4873dd5a7218 AdrianChingHC <achc92@gmail.com> 1422795485 +0800	commit: Implement friendly forwarding after log in
+43766093d4ec84e195cc7ad8cceb4873dd5a7218 c50f45f7a270dfb6133d080ea399d044b887ee52 AdrianChingHC <achc92@gmail.com> 1422795805 +0800	commit: Test for user index page authorization
+c50f45f7a270dfb6133d080ea399d044b887ee52 c8e5536eb8a960ace634636a0c91e5fefc41c782 AdrianChingHC <achc92@gmail.com> 1422795841 +0800	commit: Implement user index page authorization
+c8e5536eb8a960ace634636a0c91e5fefc41c782 0c9b25c112fae60e559434f5d38c02f3fd9842c0 AdrianChingHC <achc92@gmail.com> 1422797031 +0800	commit: Modify user index page
+0c9b25c112fae60e559434f5d38c02f3fd9842c0 daa114d2e6e82fe033f99cd857e3eb4e7fa2774a AdrianChingHC <achc92@gmail.com> 1422797385 +0800	commit: Add Faker gem for dummy users data, Seed database with users
+daa114d2e6e82fe033f99cd857e3eb4e7fa2774a 7ca56de1331a97a76d5230b9664ed5f06175f11f AdrianChingHC <achc92@gmail.com> 1422797735 +0800	commit: Add paginate related gems
+7ca56de1331a97a76d5230b9664ed5f06175f11f 1a94a9b1f7eb5486ac2b5d52f73c7a661ede84cd AdrianChingHC <achc92@gmail.com> 1422797880 +0800	commit: Paginate users index page
+1a94a9b1f7eb5486ac2b5d52f73c7a661ede84cd 7a174632364652f75d6b5dc77edb0fc78be7b0ef AdrianChingHC <achc92@gmail.com> 1422798196 +0800	commit: Add admin field to users
+7a174632364652f75d6b5dc77edb0fc78be7b0ef c0dbba53d0461e421aee03cdfe3a63534fbe28ff AdrianChingHC <achc92@gmail.com> 1422798246 +0800	commit: Default admin status to false
+c0dbba53d0461e421aee03cdfe3a63534fbe28ff 9f08936bee5d7f568188fcf5a51ded013b149890 AdrianChingHC <achc92@gmail.com> 1422798346 +0800	commit: Add admin status to seed
+9f08936bee5d7f568188fcf5a51ded013b149890 536b7676c92b49236f4737e3c8b201dd6d49beb7 AdrianChingHC <achc92@gmail.com> 1422802869 +0800	commit: Allow admin to manage all
+536b7676c92b49236f4737e3c8b201dd6d49beb7 d2495afdf86d558b4b51764018a8171bf6b16a09 AdrianChingHC <achc92@gmail.com> 1422803858 +0800	commit: Test for index page with admin and non admin
+                                                                                                                                                                e62917ac2bb826d78df12e4211c9def5c1712447 d2495afdf86d558b4b51764018a8171bf6b16a09 AdrianChingHC <achc92@gmail.com> 1422837381 +0800
+d2495afdf86d558b4b51764018a8171bf6b16a09 2ca001fc4e5456015320a8f292b75efea89f5385 AdrianChingHC <achc92@gmail.com> 1422837462 +0800	commit: Fix git error
+2ca001fc4e5456015320a8f292b75efea89f5385 cf86e424aecc43062f3fadc256f19920850ca469 AdrianChingHC <achc92@gmail.com> 1422837714 +0800	checkout: moving from feature/user-crud to develop
+cf86e424aecc43062f3fadc256f19920850ca469 6e9fdd43751a898a7c99681f34c5e00936ae6d3f AdrianChingHC <achc92@gmail.com> 1422837714 +0800	merge feature/user-crud: Merge made by the 'recursive' strategy.
+6e9fdd43751a898a7c99681f34c5e00936ae6d3f f37d2a3f6186bf5416e910455687481b378eb2c9 AdrianChingHC <achc92@gmail.com> 1422840148 +0800	commit: Fix code in user edit test
+f37d2a3f6186bf5416e910455687481b378eb2c9 f37d2a3f6186bf5416e910455687481b378eb2c9 AdrianChingHC <achc92@gmail.com> 1422840904 +0800	checkout: moving from develop to feature/user-thoughts
+f37d2a3f6186bf5416e910455687481b378eb2c9 e8538d76ef79e849a5a8f12f48a29d583bc65e91 AdrianChingHC <achc92@gmail.com> 1422841255 +0800	commit: Add Thoughts model
+e8538d76ef79e849a5a8f12f48a29d583bc65e91 5812ebb496bee7f9d1b8723457a9316daa1762d3 AdrianChingHC <achc92@gmail.com> 1422841505 +0800	commit: Test for validity of new thoughts
+5812ebb496bee7f9d1b8723457a9316daa1762d3 86983cd2d07b12c8480d2c1dab1b165f9d5bf084 AdrianChingHC <achc92@gmail.com> 1422841559 +0800	commit: Implement user_id presence in thoughts
+86983cd2d07b12c8480d2c1dab1b165f9d5bf084 6f0f456ac1d5dacbcbab7de4069537dac7727b4f AdrianChingHC <achc92@gmail.com> 1422841676 +0800	commit: Test for content presence
+6f0f456ac1d5dacbcbab7de4069537dac7727b4f f29314032efa66e22fd16671918114a45e264c68 AdrianChingHC <achc92@gmail.com> 1422841856 +0800	commit: Validates content presence
+f29314032efa66e22fd16671918114a45e264c68 6c9d14d1c920333b43050ad76f2f0a9648b12140 AdrianChingHC <achc92@gmail.com> 1422841872 +0800	commit: Test for content length
+6c9d14d1c920333b43050ad76f2f0a9648b12140 40baf311a8a5f89aff6b04e91b809bab6ae349ca AdrianChingHC <achc92@gmail.com> 1422841914 +0800	commit: Content length not longer than 250 chars
+40baf311a8a5f89aff6b04e91b809bab6ae349ca 84b6eab7eda95d2a9eccad667183f13f932b3669 AdrianChingHC <achc92@gmail.com> 1422842019 +0800	commit: Associate thoughts with users
+84b6eab7eda95d2a9eccad667183f13f932b3669 a62ae651a37d8bf09f4935be56d2b40616335bfd AdrianChingHC <achc92@gmail.com> 1422842075 +0800	commit: Modify setup in thought test
+a62ae651a37d8bf09f4935be56d2b40616335bfd 9500ff1ab032665625faf61fbdd706b2e818c87e AdrianChingHC <achc92@gmail.com> 1422842170 +0800	commit: Test for thoughts order
+9500ff1ab032665625faf61fbdd706b2e818c87e bb0256a9903e03f9447698223c38c76c0ca60d04 AdrianChingHC <achc92@gmail.com> 1422842339 +0800	commit: Add thoughts fixture for testing
+bb0256a9903e03f9447698223c38c76c0ca60d04 cd5cdb120b3eba7ae7380e635159c4f1f5884a0c AdrianChingHC <achc92@gmail.com> 1422842997 +0800	commit: Fix thought yaml syntax error
+cd5cdb120b3eba7ae7380e635159c4f1f5884a0c 225c9c17940f62666a1c8cacfd6844aca85a8e7f AdrianChingHC <achc92@gmail.com> 1422843206 +0800	commit: Test for thoughts dependant destroy
+225c9c17940f62666a1c8cacfd6844aca85a8e7f fa87bb3ccde823c0b3d602b81973e7f04eb4b089 AdrianChingHC <achc92@gmail.com> 1422848039 +0800	commit: Add destroy dependent to user
+fa87bb3ccde823c0b3d602b81973e7f04eb4b089 c60e6e8ab8ef82b6736a30a9cbdf19b944e7cb9e AdrianChingHC <achc92@gmail.com> 1422849019 +0800	commit: Add Thoguhts controller
+c60e6e8ab8ef82b6736a30a9cbdf19b944e7cb9e 886d3ddd43a594a220c0329a7c2579c28a4e6004 AdrianChingHC <achc92@gmail.com> 1422850399 +0800	commit: Add show thoughts page
+886d3ddd43a594a220c0329a7c2579c28a4e6004 373fd409926e1936521d9780dd8bb9995f6aad94 AdrianChingHC <achc92@gmail.com> 1422850456 +0800	commit: Add seed for creating micropost
+373fd409926e1936521d9780dd8bb9995f6aad94 dbe7b87bb8eea56a00a11179690622e338d7f659 AdrianChingHC <achc92@gmail.com> 1422852270 +0800	commit: Show users' thoughts on index
+dbe7b87bb8eea56a00a11179690622e338d7f659 5f61689c4c994739f8a4bc6b9828290b4f149a29 AdrianChingHC <achc92@gmail.com> 1422852525 +0800	commit: Add styling to thoughts page
+5f61689c4c994739f8a4bc6b9828290b4f149a29 f307ce95027a6def33c5571d04a5372d575f521f AdrianChingHC <achc92@gmail.com> 1422852588 +0800	commit: Add path to my thoughts tab in header
+f307ce95027a6def33c5571d04a5372d575f521f e6cbeedbe2771248e7c95b0f6f9fb2547a9d4fc8 AdrianChingHC <achc92@gmail.com> 1422855418 +0800	commit: Add edit and delete button to thoughts
+e6cbeedbe2771248e7c95b0f6f9fb2547a9d4fc8 f313a53951621285a2b6e5dd1e22b7848755d1d1 AdrianChingHC <achc92@gmail.com> 1422857128 +0800	commit: Test for displaying thoughts
+f313a53951621285a2b6e5dd1e22b7848755d1d1 22b82beb537142c902e729ace6c0282103e4b354 AdrianChingHC <achc92@gmail.com> 1422858834 +0800	commit: Add routes for thoughts create and destroy
+22b82beb537142c902e729ace6c0282103e4b354 41c590f71f137426a6a6a06c03434b0a76c775cd AdrianChingHC <achc92@gmail.com> 1422862700 +0800	commit: Test for redirection of create and destroy action if user not logged in
+41c590f71f137426a6a6a06c03434b0a76c775cd 0213b79799a6cc3a3374e5301d99d59d9458abcd AdrianChingHC <achc92@gmail.com> 1422863418 +0800	commit: Move logged in user to application controller
+0213b79799a6cc3a3374e5301d99d59d9458abcd 0a2ab35c1102349498d3b9cd33ca38fa54a11cbf AdrianChingHC <achc92@gmail.com> 1422863471 +0800	commit: Add before action to thoughts controller for authorized users
+0a2ab35c1102349498d3b9cd33ca38fa54a11cbf 899b5483ed237fb8e207bc1e38ea7b58e45144db AdrianChingHC <achc92@gmail.com> 1422866294 +0800	commit: Style thoughts page
+                                                                                                                                                                55f3023ae5325552eee042cd9e669aa70ccb0d99 899b5483ed237fb8e207bc1e38ea7b58e45144db AdrianChingHC <achc92@gmail.com> 1422868501 +0800

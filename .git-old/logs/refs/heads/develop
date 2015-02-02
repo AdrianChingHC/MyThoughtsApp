@@ -1,0 +1,14 @@
+0000000000000000000000000000000000000000 134ed5770df217645de12eebe2804c9a834f084b AdrianChingHC <achc92@gmail.com> 1422660735 +0800	branch: Created from master
+134ed5770df217645de12eebe2804c9a834f084b bac85dcebe8bf38a0dc87ad471fbc1cf5f9fd395 AdrianChingHC <achc92@gmail.com> 1422660997 +0800	commit: Initial Commit
+bac85dcebe8bf38a0dc87ad471fbc1cf5f9fd395 a5bdbd89a6654f2d780fc3e3b7078ebc5f7b7dd5 AdrianChingHC <achc92@gmail.com> 1422662019 +0800	commit: Update README
+a5bdbd89a6654f2d780fc3e3b7078ebc5f7b7dd5 04c4bd8a8b372aa4761a4770d2e09e1a3ca44395 AdrianChingHC <achc92@gmail.com> 1422662185 +0800	commit: Add README.md
+04c4bd8a8b372aa4761a4770d2e09e1a3ca44395 cb3543731ff77382c73aa29321c292c90320ee76 AdrianChingHC <achc92@gmail.com> 1422662231 +0800	commit: Update README
+cb3543731ff77382c73aa29321c292c90320ee76 13a149cc13128be8e7a9f786c7f1dc5f9fe0b2c7 AdrianChingHC <achc92@gmail.com> 1422662895 +0800	commit: Add Bootstrap Sass
+13a149cc13128be8e7a9f786c7f1dc5f9fe0b2c7 65ac51194f1263736d158d150a0f3357360d5ca4 AdrianChingHC <achc92@gmail.com> 1422663809 +0800	commit: Add gems necessary for development, production and test
+65ac51194f1263736d158d150a0f3357360d5ca4 1c76266d6d5791e1f8df4b9aa5ee370dc790bb12 AdrianChingHC <achc92@gmail.com> 1422664574 +0800	commit: Set up minitest and guard
+1c76266d6d5791e1f8df4b9aa5ee370dc790bb12 c07cc29fce0a500488b9f5157988043a6dc93a15 AdrianChingHC <achc92@gmail.com> 1422664872 +0800	commit: Add User scaffold
+c07cc29fce0a500488b9f5157988043a6dc93a15 009c2afbffcbf918a7fa98ff41d29d8c05e8b8c2 AdrianChingHC <achc92@gmail.com> 1422710827 +0800	merge feature/user-account: Merge made by the 'recursive' strategy.
+009c2afbffcbf918a7fa98ff41d29d8c05e8b8c2 ea693b6ac8e931a14187824601af7fb5d55cf57a AdrianChingHC <achc92@gmail.com> 1422711239 +0800	merge feature/enable-ssl: Merge made by the 'recursive' strategy.
+ea693b6ac8e931a14187824601af7fb5d55cf57a cf86e424aecc43062f3fadc256f19920850ca469 AdrianChingHC <achc92@gmail.com> 1422749407 +0800	merge feature/user-log-in-log-out: Merge made by the 'recursive' strategy.
+cf86e424aecc43062f3fadc256f19920850ca469 6e9fdd43751a898a7c99681f34c5e00936ae6d3f AdrianChingHC <achc92@gmail.com> 1422837714 +0800	merge feature/user-crud: Merge made by the 'recursive' strategy.
+6e9fdd43751a898a7c99681f34c5e00936ae6d3f f37d2a3f6186bf5416e910455687481b378eb2c9 AdrianChingHC <achc92@gmail.com> 1422840148 +0800	commit: Fix code in user edit test

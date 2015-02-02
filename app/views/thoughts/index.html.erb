@@ -1,7 +1,7 @@
-<div class="thought-page">
+<div class="thought-page container">
 	<div class="thought_form">
 	  <%= form_for(@thought) do |f| %>
-		  <%#= render 'shared/error_messages', object: f.object %>
+		  <%= render 'shared/error_messages', object: f.object %>
 		  <div class="field">
 		   <%= f.text_area :content, class:"form-control", placeholder: "What are you thinking now?" %>
 		   </div>
