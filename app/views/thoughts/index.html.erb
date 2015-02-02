@@ -1,16 +1,4 @@
 <div class="thought-page container">
-	<div class="thought_form">
-	  <%= form_for(@thought) do |f| %>
-		  <%= render 'shared/error_messages', object: f.object %>
-		  <div class="field">
-		   <%= f.text_area :content, class:"form-control", placeholder: "What are you thinking now?" %>
-		   </div>
-		   <div class="field-button">
-		  <%= f.submit "Save", class: "btn btn-success" %>
-		  </div>
-		<% end %>
-	</div>
-
 	<div class="col-md-8 thought-list">
 	    <% if current_user.thoughts.any? %>
 	      <h3> Your Thoughts (<%= current_user.thoughts.count %>)</h3>
