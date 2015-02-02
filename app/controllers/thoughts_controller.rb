@@ -19,8 +19,13 @@ class ThoughtsController < ApplicationController
     if @thought.save
       flash[:success] = "Thought successfully saved!"
       redirect_to thoughts_path
+    elsif params[:thought][:content].blank?
+    	flash[:danger] = "Please input your thoughts before saving."
+    	redirect_to thoughts_path
+    elsif params[:thought][:content].length > 250
+    	flash[:danger] = "Thoughts cannot be more than 250 characters."
+    	redirect_to thoughts_path
     else
-    	@feed_items = []
     	render :new
     end
 	end
