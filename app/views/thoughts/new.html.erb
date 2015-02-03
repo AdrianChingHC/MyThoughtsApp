@@ -1,22 +1,33 @@
-<div class="thought-page container">
-	<div class="thought_form">
-	  <%= form_for(@thought) do |f| %>
-		  <%= render 'shared/error_messages', object: f.object %>
-		  <div class="field">
-		   <%= f.text_area :content, class:"form-control", placeholder: "What are you thinking now?" %>
-		   </div>
-		   <div class="field-button">
-		  <%= f.submit "Save", class: "btn btn-success" %>
-		  </div>
-		<% end %>
+<div class="row">
+	<div class="thought-page container">
+			<div class="thought_form">
+	 			<%= form_for(@thought) do |f| %>
+		 		<%= render 'shared/error_messages', object: f.object %>
+			  	<div class="field">
+			   		<%= f.text_area :content, class:"form-control", placeholder: "What are you thinking now?" %>
+			   	</div>
+			   	<div class="field-button">
+			  		<%= f.submit "Save", class: "btn btn-success" %>
+			  	</div>
+				<% end %>
+			</div>
+			<div class="col-md-8 thought-list">
+				<% if @feed_items.any? %>
+					<h3> Your Thoughts (<%= current_user.thoughts.count %>)</h3>
+				  <ol class="thoughts">
+				    <%= render @feed_items %>
+				  </ol>
+				  <%= will_paginate @feed_items %>
+				<% end %>
+			</div>
 	</div>
-<div class="col-md-8 thought-list">
-	<% if @feed_items.any? %>
-	<h3> Your Thoughts (<%= current_user.thoughts.count %>)</h3>
-	  <ol class="thoughts">
-	    <%= render @feed_items %>
-	  </ol>
-	  <%= will_paginate @feed_items %>
-	<% end %>
+	<div class="rightbar">
+		<div class="nav navbar-nav navbar-right">
+		  <ul class="nav nav-pills nav-stacked">
+			  <li role="presentation" class="active"><a href="#">Home</a></li>
+			  <li role="presentation"><a href="#">Profile</a></li>
+			  <li role="presentation"><a href="#">Messages</a></li>
+			</ul>
+		</div>	
 	</div>
-</div>	
+</div>
