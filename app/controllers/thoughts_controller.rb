@@ -12,10 +12,6 @@ class ThoughtsController < ApplicationController
 			@thought = current_user.thoughts.build 
 			@feed_items = current_user.feed.paginate(page: params[:page], per_page: 10)
       @hashtags = SimpleHashtag::Hashtag.all
-      @hashtags.each do |hashtag|
-        @hashtag = SimpleHashtag::Hashtag.find_by_name("#{hashtag}")
-      end
-      @hashtagged = @hashtag.hashtaggables if @hashtag
 		end
 	end
 
