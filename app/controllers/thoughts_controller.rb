@@ -5,6 +5,7 @@ class ThoughtsController < ApplicationController
 
 	def index
 		@thoughts = current_user.thoughts.paginate(page: params[:page], per_page: 10)
+
 	end
 
 	def new

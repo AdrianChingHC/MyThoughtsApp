@@ -1,5 +1,6 @@
 <li id="thought-<%= thought.id %>">
-  <span class="content" data-no-turbolink='true'><%= best_in_place thought, :content, as: :textarea, activator: "#activator-#{thought.id}", ok_button: "Save", cancel_button: "Cancel" %></span>
+  <span class="content" data-no-turbolink='true'><%= best_in_place thought, :content, as: :textarea, activator: "#activator-#{thought.id}", ok_button: "Save", ok_button_class: "btn btn-success", cancel_button: "Cancel", cancel_button_class: "btn btn-danger", display_as: "linkify" %></span>
+  <%= linkify_hashtags(thought.content)%>
   <div class="lower-part">
   	<span class="timestamp">
     Posted <%= time_ago_in_words(thought.created_at) %> ago.
