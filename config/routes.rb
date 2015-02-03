@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get "hashtags/:hashtag",   to: "hashtags#show",      as: :hashtag
+  get "thoughts/hashtags/:hashtag",   to: "hashtags#show",      as: :hashtag
   get "hashtags",            to: "hashtags#index",     as: :hashtags
   get 'sessions/new'
 
