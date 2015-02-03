@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150202165408) do
+ActiveRecord::Schema.define(version: 20150203091709) do
 
   create_table "simple_hashtag_hashtaggings", force: :cascade do |t|
     t.integer "hashtag_id"
@@ -26,9 +26,11 @@ ActiveRecord::Schema.define(version: 20150202165408) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "thought_id"
   end
 
   add_index "simple_hashtag_hashtags", ["name"], name: "index_simple_hashtag_hashtags_on_name"
+  add_index "simple_hashtag_hashtags", ["thought_id"], name: "index_simple_hashtag_hashtags_on_thought_id"
 
   create_table "thoughts", force: :cascade do |t|
     t.text     "content"

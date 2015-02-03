@@ -11,24 +11,37 @@
 			  	</div>
 				<% end %>
 			</div>
-			<div class="col-md-8 thought-list">
-				<% if @feed_items.any? %>
-					<h3> Your Thoughts (<%= current_user.thoughts.count %>)</h3>
-				  <ol class="thoughts">
-				    <%= render @feed_items %>
-				  </ol>
-				  <%= will_paginate @feed_items %>
-				<% end %>
+			<div class="col-md-8 thought-list tab-content">
+				<div role="tabpanel" class="tab-pane active" id="home">
+					<% if @feed_items.any? %>
+						<h3> Your Thoughts (<%= current_user.thoughts.count %>)</h3>
+					  <ol class="thoughts">
+					    <%= render @feed_items %>
+					  </ol>
+					  <%= will_paginate @feed_items %>
+					<% end %>
+				</div>
+				<% @hashtags.each do |hashtag| %>
+					<div role="tabpanel" class="tab-pane" id="<%=hashtag.name%>">
+						<h1>#<%= hashtag %></h1>
+							<% if SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.present? %>
+					 		  <% SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.each do |hashtagged| %>
+					      <%= render_hashtaggable hashtagged %>
+					  	  <% end %>
+							<% else %>
+					  		<p>There is no match for the <em><%= hashtag %></em> hashtag.</p>
+							<% end %>
+					</div>
+				<%end%>
+
 			</div>
 	</div>
 	<div class="rightbar">
-		<div class="nav navbar-nav navbar-right">
-		  <ul class="nav nav-pills nav-stacked">
-			  <li role="presentation" class="active"><%= link_to "My Thoughts", thoughts_path %></li>
+		  <ul class="nav nav-tabs nav-stacked" role="tablist">
+			  <li role="presentation"><%= link_to "My Thoughts", "#home", "aria-controls" => "home", "role" => "tab", "data-toggle" => "tab" %></li>
 			  <% @hashtags.each do |hashtag| %>
-  			<li><%= link_to hashtag.name, hashtag_path(hashtag.name) %></li>
+  			<li role="presentation"><%= link_to "#"+hashtag.name, "##{hashtag.name}", "aria-controls" => "home", "role" => "tab", "data-toggle" => "tab" %></li>
 				<% end %>
 			</ul>
-		</div>	
 	</div>
 </div>
