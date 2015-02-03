@@ -1,6 +1,6 @@
 class HashtagsController < ApplicationController
 
-  def index
+  def indexz
     @hashtags = SimpleHashtag::Hashtag.all
   end
 
