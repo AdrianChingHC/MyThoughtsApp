@@ -172,6 +172,7 @@ height: 35px;
   margin-left: -40px;
   border-radius: 6px;
   width: 80%;
+  float: left;
   }
 
 .col-md-8.thought-list {
@@ -192,4 +193,13 @@ margin-left: 15px;
   background-color: #FCC;
   border: solid 2px #C66;
   &:first-letter { text-transform: uppercase; }
+}
+
+.rightbar {
+float: left;
+margin-top: 90px;
+margin-left: 10px;
+  .nav {
+  width: 200px;
+  }
 }

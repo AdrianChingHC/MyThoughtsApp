@@ -11,6 +11,7 @@ class ThoughtsController < ApplicationController
 		if logged_in?
 			@thought = current_user.thoughts.build 
 			@feed_items = current_user.feed.paginate(page: params[:page], per_page: 10)
+      @hashtags = SimpleHashtag::Hashtag.all
 		end
 	end
 
