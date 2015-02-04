@@ -15,9 +15,12 @@ rake db:migrate
 rake db:seed
 ```
 
-there are seeds for the admin account look at db/seed.rb 
-
-* email : admin@mythoughtsapp.com 
-* password : password
-
 #Things I've done in the app
+
+* User creation (email, password, name)
+* User profile
+* Gravatar profile image request
+* User ACL
+* User CRUD operations (create, read, update and delete)
+* User's thoughts CRUD operations
+* Hashtag implementation
