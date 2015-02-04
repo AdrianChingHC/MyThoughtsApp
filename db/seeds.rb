@@ -5,8 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-User.create!(name:  "Adrian Ching",
-             email: "achc92@gmail.com",
+User.create!(name:  "Admin",
+             email: "admin@mythoughtsapp.com",
              password:              "password",
              password_confirmation: "password",
              admin: true)
@@ -23,6 +23,6 @@ end
 
 users = User.order(:created_at).take(6)
 10.times do
-  content = Faker::Lorem.sentence(5)+"#mythoughtsapp"
+  content = Faker::Lorem.sentence(5)
   users.each { |user| user.thoughts.create!(content: content) }
 end
