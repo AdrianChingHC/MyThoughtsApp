@@ -44,10 +44,12 @@
 		  <ul class="nav nav-tabs nav-stacked" role="tablist">
 			  <li role="presentation"><%= link_to "My Thoughts", "#home", "aria-controls" => "home", "role" => "tab", "data-toggle" => "tab" %></li>
 			  <% @hashtags.each do |hashtag| %>
+			  <% if SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.select{|thought| thought["user_id"]== current_user.id}.any? %>
   			<li role="presentation"><%= link_to "#"+hashtag.name+"   ("+SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.select{|thought| thought["user_id"] == current_user.id }.count.to_s+")", "##{hashtag.name}", "aria-controls" => "home", "role" => "tab", "data-toggle" => "tab" %></li>
+  			<%end%>
 				<% end %>
 			</ul>
 	</div>
 </div>
 
-<%# if SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.first['user_id'] = current_user.id %>
+<%# if SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.select{|thought| thought["user_id"] == current_user.id } = current_user.id %>
