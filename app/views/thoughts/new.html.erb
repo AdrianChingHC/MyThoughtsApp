@@ -22,10 +22,10 @@
 					  <%= will_paginate @feed_items %>
 					<% end %>
 				</div>
-				<% @hashtags.each do |hashtag| %>
+			<% @hashtags.each do |hashtag| %>
 				<% div_id = hashtag.name %>
 					<div role="tabpanel" class="tab-pane" id="<%=div_id%>">
-						<h1>#<%= hashtag %></h1>
+						<h3>#<%= hashtag %></h3>
 						<ol class="hashtags">
 							<% if SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.select{|thought| thought["user_id"] == current_user.id }.present? %>
 					 		  <% SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.select{|thought| thought["user_id"] == current_user.id }.each do |hashtagged| %>

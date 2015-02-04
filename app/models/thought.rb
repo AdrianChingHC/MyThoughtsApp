@@ -14,8 +14,4 @@ class Thought < ActiveRecord::Base
 			end
 		hashtagged_content.html_safe
 	end
-
-  def hashtag
-    SimpleHashtag::Hashtag.where("thought_id = ?", id)
-  end
 end
