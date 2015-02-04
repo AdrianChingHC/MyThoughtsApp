@@ -26,12 +26,10 @@
 				<% div_id = hashtag.name %>
 					<div role="tabpanel" class="tab-pane" id="<%=div_id%>">
 						<h1>#<%= hashtag %></h1>
-						<ol class="hashtag">
+						<ol class="hashtags">
 							<% if SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.present? %>
 					 		  <% SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.each do |hashtagged| %>
-					 		  
 					      <%= render_hashtaggable hashtagged %>
-					      
 					  	  <% end %>
 							<% else %>
 					  		<p>There is no match for the <em><%= hashtag %></em> hashtag.</p>
@@ -46,7 +44,7 @@
 		  <ul class="nav nav-tabs nav-stacked" role="tablist">
 			  <li role="presentation"><%= link_to "My Thoughts", "#home", "aria-controls" => "home", "role" => "tab", "data-toggle" => "tab" %></li>
 			  <% @hashtags.each do |hashtag| %>
-  			<li role="presentation"><%= link_to "#"+hashtag.name, "##{hashtag.name}", "aria-controls" => "home", "role" => "tab", "data-toggle" => "tab" %></li>
+  			<li role="presentation"><%= link_to "#"+hashtag.name+"   ("+SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.count.to_s+")", "##{hashtag.name}", "aria-controls" => "home", "role" => "tab", "data-toggle" => "tab" %></li>
 				<% end %>
 			</ul>
 	</div>

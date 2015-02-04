@@ -11,7 +11,7 @@ User.create!(name:  "Adrian Ching",
              password_confirmation: "password",
              admin: true)
 
-99.times do |n|
+15.times do |n|
   name  = Faker::Name.name
   email = "user-#{n+1}@gmail.com"
   password = "password"
@@ -22,7 +22,7 @@ User.create!(name:  "Adrian Ching",
 end
 
 users = User.order(:created_at).take(6)
-50.times do
-  content = Faker::Lorem.sentence(5)
+10.times do
+  content = Faker::Lorem.sentence(5)+"#mythoughtsapp"
   users.each { |user| user.thoughts.create!(content: content) }
 end

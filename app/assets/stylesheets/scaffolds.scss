@@ -19,13 +19,12 @@ pre {
 }
 
 a {
-  color: #000;
+  color: #551a8b;
   &:visited {
-    color: #666;
+    color: #551a8b;
   }
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: #000;
   }
 }
 
@@ -42,16 +41,16 @@ div {
 .field_with_errors {
   padding: 2px;
   background-color: red;
-  display: table;
+  input#user_email, input#user_name, input#user_password, input#user_password_confirmation{
+    margin-bottom: 0px;
+    }
 }
 
 #error_explanation {
   width: 450px;
-  border: 2px solid red;
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
   h2 {
     text-align: left;
     font-weight: bold;
@@ -66,4 +65,5 @@ div {
     font-size: 12px;
     list-style: square;
   }
+
 }
