@@ -40,6 +40,11 @@ textarea {
 
 /* header */
 
+.navbar-inverse {
+  background-color: #000;
+  border-color: #000;
+}
+
 #logo {
   float: left;
   margin-right: 10px;
@@ -49,6 +54,7 @@ textarea {
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
+  margin-top: 10px;
 }
 
 #logo:hover {
@@ -61,6 +67,7 @@ textarea {
     .user_img {
     float: left;
     margin-right: 10px;
+    margin-top: -10px;
     }
   }
 }
@@ -121,10 +128,21 @@ input {
   list-style: none;
   padding: 0;
   width: 150%;
+  border-top: 1px solid #e8e8e8;
+
+a {
+  color: #551a8b;
+  &:visited {
+    color: #551a8b;
+  }
+  &:hover {
+    color: #000;
+  }
+}
 
   li {
     padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
   }
 
   .content {
@@ -167,7 +185,6 @@ height: 35px;
 }
 
 .thought-page.container {
-  background-color: #EFEFEF;
   margin-top: 10px;
   margin-left: -40px;
   border-radius: 6px;
@@ -181,7 +198,6 @@ margin-top: -15px;
 
 .field {
 margin-top: 30px;
-margin-left: 15px;
 }
 
 .purr {
@@ -202,4 +218,87 @@ margin-left: 10px;
   .nav {
   width: 200px;
   }
+}
+
+.hashtags {
+  list-style: none;
+  padding: 0;
+  width: 150%;
+  border-top: 1px solid #e8e8e8;
+  
+
+  li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .content {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .lower-part {
+  margin-bottom: 10px;
+  }
+
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    float: left;
+    margin-right: 10px;
+  }
+  .glyphicon.glyphicon-pencil {
+  margin-right: 10px;
+  }
+}
+a.hashtag {
+text-decoration: none;
+}
+
+.nav-tabs > li > a {
+  border-radius: 0 0 0 0;
+}
+
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+border: 0px solid #ddd;
+background-color: #ddd;
+}
+
+.nav-tabs {
+border-bottom: 0px solid #ddd;
+a {
+  color: #551a8b;
+  &:visited {
+    color: #551a8b;
+  }
+  &:hover {
+    color: #000;
+  }
+}
+}
+
+.user-buttons {
+float: right;
+}
+
+.user-gravatar-img {
+float: left;
+img {
+  margin-right: 10px;
+}
+}
+
+.user-detail, .user-img {
+float: left;
+}
+
+.gravatar_edit {
+  margin-bottom: 10px;
+}
+
+a.btn.btn-primary, a.btn.btn-danger, a.btn.btn-success {
+  color: #fff;
+
 }
