@@ -10,7 +10,7 @@ class Thought < ActiveRecord::Base
   def linkify
   	regex = SimpleHashtag::Hashtag::HASHTAG_REGEX
 			hashtagged_content = content.to_s.gsub(regex) do
-  			"<a href='##{$2}' class='hashtag'>#{$&}</a>"
+  			"<a href='##{$2}' class='hashtag' aria-controls='home' role='tab' data-toggle='tab'>#{$&}</a>"
 			end
 		hashtagged_content.html_safe
 	end
