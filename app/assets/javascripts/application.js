@@ -18,3 +18,4 @@
 //= require best_in_place.purr
 //= require jquery.purr
 //= require_tree .
+
