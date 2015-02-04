@@ -15,8 +15,8 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require best_in_place
-//= require best_in_place.purr
 //= require jquery.purr
+//= require best_in_place.purr
 //= require_tree .
 
 $(document).ready(function() {

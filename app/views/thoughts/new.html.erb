@@ -29,7 +29,16 @@
 						<ol class="hashtags">
 							<% if SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.select{|thought| thought["user_id"] == current_user.id }.present? %>
 					 		  <% SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.select{|thought| thought["user_id"] == current_user.id }.each do |hashtagged| %>
-					      <%= render_hashtaggable hashtagged %>
+					      <li id="thought-<%= hashtagged.id %>">
+							  <span class="content" data-no-turbolink='true'><%= best_in_place hashtagged, :content, as: :textarea, activator: "#activator-#{hashtagged.id}-#{hashtag}", ok_button: "Save", ok_button_class: "btn btn-success", cancel_button: "Cancel", cancel_button_class: "btn btn-danger", display_as: "linkify" %></span>
+							  <div class="lower-part">
+							  	<span class="timestamp">
+							Posted <%= time_ago_in_words(hashtagged.created_at) %> ago.
+							  </span>
+							  <%= link_to '<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>'.html_safe, "#", id: "activator-#{hashtagged.id}-#{hashtag}" %>
+							  <%= link_to '<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>'.html_safe, hashtagged, method: :delete, data: { confirm: 'Are you sure?' }%>
+							  </div>
+							</li>
 					  	  <% end %>
 							<% else %>
 					  		<p>There is no match for the <em><%= hashtag %></em> hashtag.</p>
