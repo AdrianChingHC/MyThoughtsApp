@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  include SessionsHelper
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
   before_action :set_user, only: [:edit, :update, :show, :destroy]
   before_action :require_admin, only: [:destroy, :index]
@@ -16,7 +17,12 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
+    if logged_in?
+      flash[:info]= 'You already have an account. Enjoy using My Thoughts App!'
+      redirect_to thoughts_path
+    else
     @user = User.new
+    end
   end
 
   # GET /users/1/edit

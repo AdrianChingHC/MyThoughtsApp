@@ -34,8 +34,9 @@ class ThoughtsController < ApplicationController
   def update
     if @thought.update(thought_params)
       respond_to do |format|
+        flash[:success]='Thoughts successfully updated.'
         format.html { redirect_to thoughts_path }
-        format.json { respond_with_bip(@thought) }
+        format.json { respond_with_bip(@thought)}
       end
     else
       format.html { render :action => "new" }

@@ -1,5 +1,9 @@
 class SessionsController < ApplicationController
   def new
+    if logged_in?
+      flash[:info]= 'You are already logged in.'
+      redirect_to thoughts_path
+    end
   end
 
   def create
@@ -16,6 +20,7 @@ class SessionsController < ApplicationController
 
   def destroy
   	log_out
-    redirect_to root_url
+    flash[:success]= 'Logged out successfully.'
+    redirect_to login_url
   end
 end
