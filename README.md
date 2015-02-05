@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/AdrianChingHC/MyThoughtsApp/badges/gpa.svg)](https://codeclimate.com/github/AdrianChingHC/MyThoughtsApp)
+
 # My Thoughts App
 An application that allows users to save their thoughts within the application.
 
