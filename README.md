@@ -26,3 +26,4 @@ rake db:seed
 * User CRUD operations (create, read, update and delete)
 * User's thoughts CRUD operations
 * Hashtag implementation
+* Responsive design for better mobile display
