@@ -11,7 +11,18 @@
 </div>
 
 <div class="row">
-	<div class="col-md-8 thought-list tab-content">
+	<div class="col-md-4 col-md-push-8 rightbar">
+		<ul class="nav nav-tabs nav-stacked" role="tablist">
+			<li role="presentation"><%= link_to "My Thoughts", "#home", "aria-controls" => "home", "role" => "tab", "data-toggle" => "tab" %></li>
+			<% @hashtags.each do |hashtag| %>
+			 	<% if SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.select{|thought| thought["user_id"]== current_user.id}.any? %>
+  				<li role="presentation"><%= link_to "#"+hashtag.name+"   ("+SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.select{|thought| thought["user_id"] == current_user.id }.count.to_s+")", "##{hashtag.name}", "aria-controls" => "home", "role" => "tab", "data-toggle" => "tab" %></li>
+  			<%end%>
+			<% end %>
+		</ul>
+	</div>
+
+	<div class="col-md-8 col-md-pull-4 thought-list tab-content">
 		<div role="tabpanel" class="tab-pane active" id="home">
 			<% if @feed_items.any? %>
 				<h3> Your Thoughts (<%= current_user.thoughts.count %>)</h3>
@@ -43,16 +54,5 @@
 				<ol>
 			</div>
 		<%end%>
-	</div>
-
-	<div class="col-md-4 rightbar">
-		<ul class="nav nav-tabs nav-stacked" role="tablist">
-			<li role="presentation"><%= link_to "My Thoughts", "#home", "aria-controls" => "home", "role" => "tab", "data-toggle" => "tab" %></li>
-			<% @hashtags.each do |hashtag| %>
-			 	<% if SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.select{|thought| thought["user_id"]== current_user.id}.any? %>
-  				<li role="presentation"><%= link_to "#"+hashtag.name+"   ("+SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.select{|thought| thought["user_id"] == current_user.id }.count.to_s+")", "##{hashtag.name}", "aria-controls" => "home", "role" => "tab", "data-toggle" => "tab" %></li>
-  			<%end%>
-			<% end %>
-		</ul>
 	</div>
 </div>

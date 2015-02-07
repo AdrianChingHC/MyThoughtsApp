@@ -1,25 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Users</h1>
+
 <%= will_paginate %>
+
 <ul class="users">
   <% @users.each do |u| %>
     <li>
-    <div class="user-gravatar-img">
-      <div class="user-img"><img src="<%= gravatar_for(u, 80) %>" alt="<%= u.name %>"> </div>
-      <div class="user-detail">
-      <h3><%= u.name %></h3>
-      <h4><%= u.email %></h4>
-      </div>
-      </div>
-      <div class="user-buttons">
-      <%= link_to 'Show', u, class: "btn btn-primary" %>
-      <%= link_to 'Edit', edit_user_path(u) , class: "btn btn-primary" %>
-      <% if current_user.admin? && !current_user?(u) %>
-      <%= link_to 'Destroy', u, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
-      <%end%>
+      <div class="row">
+        <div class="col-md-1"><img src="<%= gravatar_for(u, 80) %>" alt="<%= u.name %>"></div>
+        <div class="col-md-7">
+        <h3><%= u.name %></h3>
+        <h4><%= u.email %></h4>
+        </div>
+        <div class="col-md-3 text-right users-button">
+          <%= link_to 'Show', u, class: "btn btn-primary" %>
+          <%= link_to 'Edit', edit_user_path(u) , class: "btn btn-primary" %>
+          <% if current_user.admin? && !current_user?(u) %>
+          <%= link_to 'Destroy', u, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+          <%end%>
+        </div>
       </div>
     </li>
   <% end %>
 </ul>
+
 <%= will_paginate %>
