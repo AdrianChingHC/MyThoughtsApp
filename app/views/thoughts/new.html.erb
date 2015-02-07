@@ -1,64 +1,58 @@
-<div class="row">
-	<div class="thought-page container">
-			<div class="thought_form">
-	 			<%= form_for(@thought) do |f| %>
-		 		<%= render 'shared/error_messages', object: f.object %>
-			  	<div class="field">
-			   		<%= f.text_area :content, class:"form-control", placeholder: "What are you thinking now?" %>
-			   	</div>
-			   	<div class="field-button">
-			  		<%= f.submit "Save", class: "btn btn-success" %>
-			  	</div>
-				<% end %>
-			</div>
-			<div class="col-md-8 thought-list tab-content">
-			<% div_id = "home" %>
-				<div role="tabpanel" class="tab-pane active" id="<%=div_id%>">
-					<% if @feed_items.any? %>
-						<h3> Your Thoughts (<%= current_user.thoughts.count %>)</h3>
-					  <ol class="thoughts">
-					    <%= render @feed_items %>
-					  </ol>
-					  <%= will_paginate @feed_items %>
-					<% end %>
-				</div>
-			<% @hashtags.each do |hashtag| %>
-				<% div_id = hashtag.name %>
-					<div role="tabpanel" class="tab-pane" id="<%=div_id%>">
-						<h3>#<%= hashtag %></h3>
-						<ol class="hashtags">
-							<% if SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.select{|thought| thought["user_id"] == current_user.id }.present? %>
-					 		  <% SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.select{|thought| thought["user_id"] == current_user.id }.each do |hashtagged| %>
-					      <li id="thought-<%= hashtagged.id %>">
-							  <span class="content" data-no-turbolink='true'><%= best_in_place hashtagged, :content, as: :textarea, activator: "#activator-#{hashtagged.id}-#{hashtag}", ok_button: "Save", ok_button_class: "btn btn-success", cancel_button: "Cancel", cancel_button_class: "btn btn-danger", display_as: "linkify" %></span>
-							  <div class="lower-part">
-							  	<span class="timestamp">
-							Posted <%= time_ago_in_words(hashtagged.created_at) %> ago.
-							  </span>
-							  <%= link_to '<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>'.html_safe, "#", id: "activator-#{hashtagged.id}-#{hashtag}" %>
-							  <%= link_to '<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>'.html_safe, hashtagged, method: :delete, data: { confirm: 'Are you sure?' }%>
-							  </div>
-							</li>
-					  	  <% end %>
-							<% else %>
-					  		<p>There is no match for the <em><%= hashtag %></em> hashtag.</p>
-							<% end %>
-							<ol>
-					</div>
-				<%end%>
-
-			</div>
-	</div>
-	<div class="rightbar">
-		  <ul class="nav nav-tabs nav-stacked" role="tablist">
-			  <li role="presentation"><%= link_to "My Thoughts", "#home", "aria-controls" => "home", "role" => "tab", "data-toggle" => "tab" %></li>
-			  <% @hashtags.each do |hashtag| %>
-			  <% if SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.select{|thought| thought["user_id"]== current_user.id}.any? %>
-  			<li role="presentation"><%= link_to "#"+hashtag.name+"   ("+SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.select{|thought| thought["user_id"] == current_user.id }.count.to_s+")", "##{hashtag.name}", "aria-controls" => "home", "role" => "tab", "data-toggle" => "tab" %></li>
-  			<%end%>
-				<% end %>
-			</ul>
-	</div>
+<div class="row thought-form">
+	<%= form_for(@thought) do |f| %>
+		<%= render 'shared/error_messages', object: f.object %>
+		<div class="col-md-6">
+		  <%= f.text_area :content, class:"form-control", placeholder: "What are you thinking now?" %>
+		</div>
+		<div class="col-md-2">
+		 	<%= f.submit "Save", class: "btn btn-success" %>
+		</div>
+	<% end %>
 </div>
 
-<%# if SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.select{|thought| thought["user_id"] == current_user.id } = current_user.id %>
+<div class="row">
+	<div class="col-md-4 col-md-push-8 rightbar">
+		<ul class="nav nav-tabs nav-stacked" role="tablist">
+			<li role="presentation"><%= link_to "My Thoughts", "#home", "aria-controls" => "home", "role" => "tab", "data-toggle" => "tab" %></li>
+			<% @hashtags.each do |hashtag| %>
+			 	<% if SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.select{|thought| thought["user_id"]== current_user.id}.any? %>
+  				<li role="presentation"><%= link_to "#"+hashtag.name+"   ("+SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.select{|thought| thought["user_id"] == current_user.id }.count.to_s+")", "##{hashtag.name}", "aria-controls" => "home", "role" => "tab", "data-toggle" => "tab" %></li>
+  			<%end%>
+			<% end %>
+		</ul>
+	</div>
+
+	<div class="col-md-8 col-md-pull-4 thought-list tab-content">
+		<div role="tabpanel" class="tab-pane active" id="home">
+			<% if @feed_items.any? %>
+				<h3> Your Thoughts (<%= current_user.thoughts.count %>)</h3>
+				<ol class="thoughts">
+					<%= render @feed_items %>
+				</ol>
+				<%= will_paginate @feed_items %>
+				<% end %>
+		</div>
+		<% @hashtags.each do |hashtag| %>
+			<% div_id = hashtag.name %>
+			<div role="tabpanel" class="tab-pane" id="<%=div_id%>">
+				<h3>#<%= hashtag %></h3>
+				<ol class="hashtags">
+					<% if SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.select{|thought| thought["user_id"] == current_user.id }.present? %>
+					 	<% SimpleHashtag::Hashtag.find_by_name("#{hashtag}").hashtaggables.select{|thought| thought["user_id"] == current_user.id }.each do |hashtagged| %>
+					    <li id="thought-<%= hashtagged.id %>">
+								<span class="content" data-no-turbolink='true'><%= best_in_place hashtagged, :content, as: :textarea, activator: "#activator-#{hashtagged.id}-#{hashtag}", ok_button: "Save", ok_button_class: "btn btn-success", cancel_button: "Cancel", cancel_button_class: "btn btn-danger", display_as: "linkify" %></span>
+								<div class="lower-part">
+								  <span class="timestamp">Posted <%= time_ago_in_words(hashtagged.created_at) %> ago.</span>
+								  <%= link_to '<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>'.html_safe, "#", id: "activator-#{hashtagged.id}-#{hashtag}" %>
+								  <%= link_to '<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>'.html_safe, hashtagged, method: :delete, data: { confirm: 'Are you sure?' }%>
+								</div>
+							</li>
+					  <% end %>
+					<% else %>
+					  <p>There is no match for the <em><%= hashtag %></em> hashtag.</p>
+					<% end %>
+				<ol>
+			</div>
+		<%end%>
+	</div>
+</div>
