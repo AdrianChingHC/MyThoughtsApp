@@ -87,6 +87,10 @@ input {
 
 /* miscellaneous */
 
+.alert {
+  margin-top: 2%;
+}
+
 .debug_dump {
   clear: both;
   float: left;
@@ -127,7 +131,6 @@ input {
 .thoughts {
   list-style: none;
   padding: 0;
-  width: 150%;
   border-top: 1px solid #e8e8e8;
 
 a {
@@ -166,16 +169,12 @@ a {
   }
 }
 
-.field-button {
-width: 10%;
-float: left;
+textarea#thought_content {
+height: 35px;
 }
 
-textarea#thought_content {
-width: 85%;
-float: left;
-margin-right: 10px;
-height: 35px;
+.thought-form {
+  margin-top: 3%;
 }
 
 .thought-page {
@@ -185,20 +184,11 @@ height: 35px;
 }
 
 .thought-page.container {
-  margin-top: 10px;
-  margin-left: -40px;
+  margin-top: 3%;
   border-radius: 6px;
   width: 80%;
   float: left;
   }
-
-.col-md-8.thought-list {
-margin-top: -15px;
-}
-
-.field {
-margin-top: 30px;
-}
 
 .purr {
   position: fixed;
@@ -211,19 +201,9 @@ margin-top: 30px;
   &:first-letter { text-transform: uppercase; }
 }
 
-.rightbar {
-float: left;
-margin-top: 90px;
-margin-left: 10px;
-  .nav {
-  width: 200px;
-  }
-}
-
 .hashtags {
   list-style: none;
   padding: 0;
-  width: 150%;
   border-top: 1px solid #e8e8e8;
 
 
@@ -302,6 +282,13 @@ a.btn.btn-primary, a.btn.btn-danger, a.btn.btn-success {
   color: #fff;
 
 }
+
+/* Login Signup Page*/
+.login-signup-page {
+  margin-top: 10%;
+}
+
+/* Footer */
 
 html {
   position: relative;
