@@ -35,8 +35,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
       if @user.save
         log_in @user
-        flash[:success] = 'Welcome to MyThoughts App!' 
-        redirect_to @user
+        flash[:success] = 'Welcome to MyThoughts App!'
+        redirect_to thoughts_path
       else
         render :new
       end
