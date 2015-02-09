@@ -15,7 +15,7 @@
 		<ul class="nav nav-tabs nav-stacked" role="tablist">
 			<li role="presentation">
 				<%= link_to "#home", "aria-controls" => "home", "role" => "tab", "data-toggle" => "tab" do %>
-				My Thoughts<span class="badge" style="float:right;"><%= @hashtags.count.to_s %></span>
+				My Thoughts<span class="badge" style="float:right;"><%= current_user.thoughts.count %></span>
 				<%end%>
 			</li>
 			<% @hashtags.each do |hashtag| %>
